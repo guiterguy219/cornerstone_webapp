@@ -1,6 +1,15 @@
-﻿body {
+﻿html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(rgba(255,255,255,.3), rgb(255,255,255)), url(../Images/banner.jpeg);
+    background-attachment: scroll;
+    background-position: 0 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
     padding-top: 50px;
-    padding-bottom: 20px;
+    
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -16,3 +25,144 @@ textarea {
     max-width: 280px;
 }
 
+.mobile-call {
+    display: none;
+}
+
+.normal-call {
+    color: white !important;
+    font-weight: bold;
+}
+
+.normal-call:active, .my-title:active, .normal-call:target, .my-title:target, normal-call, my-title:link, normal-call:link {
+    color: white !important;
+}
+
+.home-container, .carousel-container, .faqs-container, .contact-container, .footer-container {
+    padding-top: 40px !important;
+}
+
+.jumbo-container {
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar-toggle {
+        display: none;
+    }
+
+    .mobile-call {
+        display: block;
+        color: white;
+        font-size: 14pt;
+        padding: 5px !important;
+        padding-bottom: 0 !important;
+    }
+
+    .jumbo-container {
+        flex-direction: column;
+    }
+
+    .navbar-title {
+        font-size: 12pt !important;
+    }
+}
+
+.jumbo-logo {
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.jumbo-body {
+    padding-bottom: 15px;
+    max-width: 500px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.carousel-container {
+    max-width: 800px !important;
+}
+
+.faqs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    padding: 5px;
+}
+
+.faqs-container button {
+    margin: 5px;
+}
+
+.btn {
+    white-space: normal !important;
+}
+
+.faq-panel {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(210,210,210) !important;
+    color: rgb(60,60,60);
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.contact-container-row {
+    align-self: stretch;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 5px;
+}
+
+.contact-container-row a {
+    color: white;
+    text-decoration: none !important;
+    font-weight: bold;
+}
+
+.contact-container-item {
+    background-color: rgb(210,210,210);
+    border-radius: 5px;
+    border-bottom: rgb(22,152,250) solid 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: rgb(60,60,60);
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-container-item:hover {
+    background-color: rgb(60,60,60);
+    text-decoration: none !important;
+    color: rgb(220,220,220);
+}
+
+.contact-container-item i {
+    color: rgb(22,152,250);
+    font-size: 24pt;
+}
+
+.footer-container {
+    background-color: rgb(60,60,60);
+    color: white;
+
+    padding-bottom: 150px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 0;
+}

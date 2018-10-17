@@ -93,11 +93,22 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\1.jpeg" />
+    <Content Include="Images\2.jpeg" />
+    <Content Include="Images\4.jpeg" />
+    <Content Include="Images\5a.jpeg" />
+    <Content Include="Images\5b.jpeg" />
+    <Content Include="Images\banner.jpeg" />
+    <Content Include="Images\cornerstone_icon.ico" />
+    <Content Include="Images\main-logo.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\cornerstonewebapp20181017100701 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>

@@ -13,5 +13,10 @@ namespace cornerstone_webapp.Controllers
         {
             return View("Home");
         }
+
+        public ActionResult Home()
+        {
+            return View("Home");
+        }
     }
 }
