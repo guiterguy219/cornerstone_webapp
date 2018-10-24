@@ -1,10 +1,11 @@
 ﻿
 @{
     ViewBag.Title = "Home";
-    ViewBag.Links = "<li><a href=\"#section1\">Home</a></li><li><a href=\"#section2\">FAQs</a></li><li><a href=\"#section3\">Contact</a></li>";
+    ViewBag.Links = "<li><a href=\"#home\">Home</a></li><li><a href=\"#pricing\">Pricing</a></li><li><a href=\"#faqs\">FAQs</a></li><li><a href=\"#contacts\">Contact</a></li>";
 }
-
-<div class="container home-container" id="section1">
+<!--HOME-->
+<div class="container home-container" id="home">
+    <!--MAIN JUMBOTRON SITE HEADER-->
     <div class="container">
         <div class="jumbotron jumbo-container">
             <div class="jumbo-logo">
@@ -16,6 +17,7 @@
             </div>
         </div>
     </div>
+    <!--CAROUSEL-->
     <div class="container carousel-container">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -30,13 +32,16 @@
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
+                <div class="carousel-caption text-background">
+                    <h3>We look at <span class="italics">everything</span>.</h3>
+                    <p>Roof, Exterior, Interior, Foundation, Attic, Insulations, Basement, HVAC, Plumbing, Electrical, Doors, Windows, and More!</p>
+                </div>
                 <div class="item active">
                     <img src="~/Images/1.jpeg" alt="Inspecting the roof">
                 </div>
                 <div class="item">
                     <img src="~/Images/2.jpeg" alt="Electrical box">
                 </div>
-
                 <div class="item">
                     <img src="~/Images/4.jpeg" alt="HVAC system" />
                 </div>
@@ -63,7 +68,27 @@
         </div>
     </div>
 </div>
-<div class="container faqs-container" id="section2">
+<!--PRICING-->
+<div class="container pricing-container" id="pricing">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>Special Promotion November and December Only:</h2>    
+        </div>
+        <div class="panel-body">
+            <span class="big-price">
+                $250
+            </span>
+            <p>
+                During the months of November and December, we will perform any residential home inspection (4 units or fewer) for $250, no matter the size or age.  No catch.
+                We cover everything a more expensive home inspector
+                might, and we give the client a detailed electronic report using state-of-the-art inspection software.
+                If you want the quality of a $500+ home inspection without paying $500, we’ve got you covered.
+            </p>
+        </div>
+    </div>
+</div>
+<!--FAQS-->
+<div class="container faqs-container" id="faqs">
     <h3>FAQ's</h3>
     <button type="button" class="btn btn-info" onclick="reveal_faqA(1)">What is a home inspection?</button>
     <div class="panel panel-info faq-panel" id="faq-1-a">
@@ -86,7 +111,7 @@
     <button type="button" class="btn btn-info" onclick="reveal_faqA(3)" style="display: none">Why should I want a home inspection?</button>
     <div class="panel panel-info faq-panel" id="faq-3-a">
         <div class="panel-body">
-            
+
         </div>
     </div>
     <button type="button" class="btn btn-info" onclick="reveal_faqA(4)">What should I look for in a home inspector?</button>
@@ -131,7 +156,8 @@
         </div>
     </div>
 </div>
-<div class="container contact-container" id="section3">
+<!--CONTACTS-->
+<div class="container contact-container" id="contacts">
     <h3>Contact</h3>
     <div class="contact-container-row">
         <a href="tel:+13853093164">
