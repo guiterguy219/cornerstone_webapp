@@ -2,43 +2,37 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="Cornerstone" />
     <meta name="description" content="Cornerstone Home Inspections, LLC" />
     <meta name="author" content="Jared Gibson" />
     <link rel="shortcut icon" type="image/x-icon" href="~/Images/cornerstone_icon.ico" />
     <title>Cornerstone Home Insepctions, LLC</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
     <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
     <script src="~/Scripts/main.js"></script>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="10" onresize="collapseMenu()">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header navbar-title">
-                <button type="button" class="navbar-toggle menu-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <button type="button" class="navbar-toggle mobile-call" onclick="callNumber()">
-                    <span class="glyphicon glyphicon-earphone"></span>
-                </button>
-                @Html.ActionLink("Cornerstone Home Inspections, LLC", "Index", "Home", new { area = "" }, new { @class = "navbar-brand navbar-title my-title" })
-            </div>
-            <div class="navbar-collapse collapse" id="menu">
-                <ul class="nav navbar-nav">
-                    @Html.Raw((string)ViewBag.Links)
-                </ul>
-                <ul class="nav navbar-nav navbar-right normal-call">
-                    <li><a href="tel:+13853093164">(385) 309-3164</a></li>
-                </ul>
-            </div>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" onresize="collapseMenu(), setSizes()" onscroll="collapseMenu()" id="top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand navbar-title" href="@Url.Action("Index", "Home")" id="navbar-title">Cornerstone Home Inspections, LLC</a>
+        <button class="navbar-toggler menu-toggle" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <button type="button" class="navbar-toggler mobile-call" onclick="callNumber()">
+            <i class="fa fa-phone"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                @Html.Raw((string)ViewBag.Links)
+                <li class="nav-item"><a class="nav-link normal-call scrolly" href="tel:+13853093164">(385) 309-3164</a></li>
+            </ul>                
         </div>
-    </div>
-    <div class="container body-content">
+    </nav>
+    <div class="container body-content" onclick="collapseMenu()">
         @RenderBody()
         <hr />
     </div>
