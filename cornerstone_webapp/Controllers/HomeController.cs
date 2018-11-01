@@ -17,7 +17,9 @@ namespace cornerstone_webapp.Controllers
 
         public ActionResult Home()
         {
-            return View("Home");
+            InspectionRequest currentRequest = (InspectionRequest)TempData["currentRequest"];
+
+            return View("Home", currentRequest);
         }
     }
 }

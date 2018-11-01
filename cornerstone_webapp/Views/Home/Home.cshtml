@@ -1,0 +1,266 @@
+﻿@model cornerstone_webapp.Models.InspectionRequest
+
+@{
+    ViewBag.Title = "Home";
+    ViewBag.Links = "<li class=\"nav-item\"><a class=\"nav-link scrolly\" href=\"#home\">Home</a></li><li class=\"nav-item\"><a class=\"nav-link scrolly\" href=\"#pricing\">Pricing</a></li><li class=\"nav-item\"><a class=\"nav-link scrolly\" href=\"#faqs\">FAQs</a></li><li class=\"nav-item\"><a class=\"nav-link scrolly\" href=\"#contacts\">Contact</a></li>";
+
+
+}
+
+<script>
+    var pageTitle = "Home"
+</script>
+
+@{
+    if (Model != null)
+    {
+        if (Model.IsSubmitted == true)
+        {
+            <div class="alert alert-dismissible alert-success my-alert">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <h3>Thanks, @Model.CustName.Split(' ')[0]!</h3>
+                <p>Your request has been successfully submitted.</p>
+            </div>
+        }
+    }
+}
+
+<!--HOME-->
+<div class="container home-container" id="home">
+    <!--MAIN JUMBOTRON SITE HEADER-->
+    <div class="container main-header bg-light">
+        <div class="row">
+            <div class="col-md-4 main-logo">
+                <img src="~/Images/main-logo.png" class="media-object">
+            </div>
+            <div class="col-md-8 main-content">
+                <p class="lead">Providing buyers, agents, and homeowners with the best home inspections in Northern and Central Utah.</p>
+            </div>
+        </div>
+    </div>
+    <!--CAROUSEL-->
+    <div class="carousel-container">
+        <div class="row">
+            <div class="col-lg-8 carousel-col" id="carouselCol">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                        <li data-target="#demo" data-slide-to="3"></li>
+                        <li data-target="#demo" data-slide-to="4"></li>
+                    </ul>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/Images/1.jpeg" alt="Inspecting the roof" class="carousel-image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Images/2.jpeg" alt="Electrical box" class="carousel-image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Images/5a.jpeg" alt="Expansion Tank" class="carousel-image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Images/5b.jpeg" alt="Deck steps" class="carousel-image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Images/6.jpeg" alt="Insulation" class="carousel-image">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4" id="captionCol">
+                <div class="picture-caption-large bg-light">
+                    <h3>
+                        We Look at <span class="italics">Everything</span>
+                    </h3>
+                    <p class="text-center lead">
+                        Roof, Exterior, Interior, Foundation, Attic, Insulations, Basement, HVAC, Plumbing, Electrical, Doors, Windows, and More!
+                    </p>      
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="space-box">
+</div>
+<!--TARGET SPECIFIC INFORMATION-->
+<div class="container info-container" id="info-container">
+    <h2>I am a...</h2>
+    <br>
+    <!-- Nav pills -->
+    <ul class="nav nav-pills nav-justified">
+        <li class="nav-item">
+            <a class="nav-link active m-1" data-toggle="pill" href="#buyer">Buyer</a>
+        </li>
+        <li class="nav-item m-1">
+            <a class="nav-link" data-toggle="pill" href="#agent">Agent</a>
+        </li>
+    </ul>
+    <br />
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane container fade active show" id="buyer">
+            <h2>
+                For Buyers: An Easy Way to Save <span class="italics">Thousands</span> While Buying a Home
+            </h2>
+            <p>
+                Buying a home is maybe the biggest purchase of your life.  You <span class="italics">don't</span> want to spend any more money than you have to.  But if you buy a home that has hidden defects or deficiencies, you are doing just that.  Some have estimated that <a href="https://www.realtor.com/news/trends/how-much-new-homeowners-spend-after-moving-in/" target="_blank">home buyers spend over $10,000 in the first year</a> after move-in, including thousands in home repairs and maintenance.
+            </p>
+            <p>
+                Knowing what you’re <span class="italics">really</span> buying (a great house + certain repairs and maintenance costs in that new house) will help you make budget-smart decisions and prepare for your family’s financial future.
+            </p>
+            <p>
+                Cornerstone Home Inspections allows you to “test drive” your new house by examining it top to bottom and then walking through it with you.  We are specially trained to look at the components of each home system and then evaluate their condition so that you know what you’re buying into when you’re moving into your new home.
+            </p>
+        </div>
+        <div class="tab-pane container fade" id="agent">
+            <div class="d-flex flex-column">
+                <h2>
+                    For Realtors: The Secret to Selling Homes <span class="italics">Fast</span>
+                </h2>
+                <p>
+                    Did you know that the number of buyers who back away from a deal is increasing more and more each year and that first-time home buyers are the most likely to back out before closing?
+                </p>
+                <p>
+                    That can be frightening, especially considering that the percentage of first-time home buyers is increasing rapidly.  To combat this pandemic of cold feet, <a href="http://articles.latimes.com/2007/aug/26/realestate/re-inspect26" target="_blank">media outlets like the <span class="italics">Los Angeles Times</span></a> are suggesting a new kind of selling strategy: pre-listing inspections.
+                </p>
+                <p class="m-0">
+                    Cornerstone Home Inspections can help protect you from time wasted on lost deals by providing your clients with a home inspection <span class="italics">before</span> you list the home on the market.  We provide you with a shareable electronic inspection report and a “Move-in Certified” seal to put on your marketing materials so that potential buyers know their new home is safe and priced correctly.
+                </p>
+                <img src="~/Images/moveincertified.gif" alt="Move-in Certified logo" class="align-self-center m-2" />
+                <p>
+                    The fact is, your buyers are eventually going to conduct an inspection. You may as well know what they are going to find by getting there first.  And having an inspection performed ahead of time helps in many other ways, such as:
+                </p>
+                <ul>
+                    <li>It allows you to see your home through the eyes of a critical and neutral third party.</li>
+                    <li>It alerts you to immediate safety issues before agents and visitors tour your home.</li>
+                    <li>It may alert you to items of immediate concern, such as radon gas or active termite infestation.</li>
+                </ul>
+                <p>
+                    It also permits you to make repairs ahead of time so that ...
+                </p>
+                <ul>
+                    <li><strong>Defects won't become negotiating stumbling blocks later.</strong></li>
+                    <li>There is no delay in obtaining the Use and Occupancy Permit.</li>
+                    <li>You have the time to get reasonably priced contractors or make the repairs yourself, if qualified.</li>
+                    <li>It helps you to price your home realistically.</li>
+                    <li>It may relieve prospects' concerns and suspicions.</li>
+                    <li><strong>It may encourage the buyer to waive his inspection contingency.</strong></li>
+                    <li>It reduces your liability by adding professional supporting documentation to your disclosure statement.</li>
+                </ul>
+                <p>
+                    For more information about the Move-in Certified program, go to <a href="https://www.moveincertified.com/" target="_blank">www.moveincertified.com</a> or call us at <a href="tel:+13853093164">385-309-3164</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--PRICING-->
+<div class="container pricing-container" id="pricing">
+    <div class="card">
+        <div class="card-header alert-primary text-white pricing-header">
+            Special Promotion:
+        </div>
+        <div class="card-body bg-light price-card">
+            <span class="big-price">
+                $250
+            </span>
+            <p>
+                During the months of November and December, we will perform any residential home inspection (4 units or fewer) for $250, no matter the size or age. No catch. We cover everything a more expensive home inspector might, and we give our clients a detailed electronic report using state-of-the-art inspection software. Why such a <span class="italics">ridiculously low</span> price? Because we want to prove to <span class="italics">as many home sellers and buyers as possible</span> that we have the <strong>highest quality</strong> product in Utah.  If you want the quality of a $500+ home inspection without paying $500+, we’ve got you covered.
+            </p>
+        </div>
+    </div>
+</div>
+<!--FAQS-->
+<div class="container faqs-container" id="faqs">
+    <h3>FAQ's</h3>
+    <button type="button" class="btn btn-info" onclick="reveal_faqA(1)">What is a home inspection?</button>
+    <div class="card bg-light faq-panel" id="faq-1-a">
+        <div class="card-body">
+            A home inspection is a non-invasive, visual inspection of important systems and components in your home. Home inspections help buyers <a href="#info-container" class="scrolly-50">find the right house for the right price</a> by helping you identify problems that could pose a safety hazard or negatively affect the value of your home.
+        </div>
+    </div>
+    <button type="button" class="btn btn-info" onclick="reveal_faqA(2)">What is included in a home inspection?</button>
+    <div class="card bg-light faq-panel" id="faq-2-a">
+        <div class="card-body">
+            At Cornerstone, we strive to provide you with the most thorough inspection available, following InterNACHI's Standards of Practice. This includes a detailed report of the roof, exterior, interior, foundation, attic, insulations, basement, HVAC, plumbing, electrical, doors, and windows as well as any attached garages or decks. If you have questions about what we cover, call or text us at <a href="tel:+13853093164">385-309-3164</a>. For more information about InterNACHI's Standards of Practice, go to <a href="https://www.nachi.org/sop" target="_blank">nachi.org/sop</a>.
+        </div>
+    </div>
+    <button type="button" class="btn btn-info" onclick="reveal_faqA(3)" style="display: none">Why should I want a home inspection?</button>
+    <div class="card bg-light faq-panel" id="faq-3-a">
+        <div class="card-body">
+
+        </div>
+    </div>
+    <button type="button" class="btn btn-info" onclick="reveal_faqA(4)">What should I look for in a home inspector?</button>
+    <div class="card bg-light faq-panel" id="faq-4-a">
+        <div class="card-body">
+            Hiring a bad home inspector can be as bad as not hiring one at all.  Home inspectors should always be certified and trained by an inspection certification association, and they should have your best interest at heart.  At Cornerstone, our inspectors are always certified with the International Association of Certified Home Inspectors (InterNACHI).  This means that we’re held to the highest standards of quality in the industry and are required to pass a rigorous inspection exam and perform several home inspections prior to certification. It also means that we follow InterNACHI’s Standards of Practice and Code of Ethics, which is why Cornerstone Inspectors will <span class="italics">never</span> suggest a service you don’t need.  We provide each client with an inspection report in hard copy and online through state-of-the-art inspection software, and we will stay in communication with you long after the inspection is complete to answer questions about this report and help you maintain your home.
+        </div>
+    </div>
+    <button type="button" class="btn btn-info" onclick="reveal_faqA(5)">How long does an inspection usually take?</button>
+    <div class="card bg-light faq-panel" id="faq-5-a">
+        <div class="card-body">
+            Times vary depending on a variety of factors,
+            but plan on your inspector spending about 3-4 hours.
+        </div>
+    </div>
+    <button type="button" class="btn btn-info" onclick="reveal_faqA(6)">Should I be there for the inspection?</button>
+    <div class="card bg-light faq-panel" id="faq-6-a">
+        <div class="card-body">
+            Most home buyers find it valuable to arrive about 1 hour before the inspection
+            is complete and walk through the home with the inspector.
+        </div>
+    </div>
+    <button type="button" class="btn btn-info" style="display: none" onclick="reveal_faqA(7)">What sets Cornerstone Home Inspections apart from other inspection companies?</button>
+    <div class="card bg-light faq-panel" id="faq-7-a">
+        <div class="card-body">
+            Each of our inspectors is certified with InterNACHI, the largest association
+            of real estate inspectors in the world.  We are meticulous and dedicated in
+            our reports, and each inspection report is delivered to you
+            in hard copy and online through state-of-the-art inspection software.
+            Friendly and accessible, we will stay in communication
+            with you long after the inspection is complete to answer questions, improve our
+            service, and help you maintain your home.
+        </div>
+    </div>
+</div>
+<!--CONTACTS-->
+<div class="container contact-container" id="contacts">
+    <h3>Contact</h3>
+    <div class="contact-container-row">
+        <a href="@Url.Action("RequestForm", "Request", null) " style="display: none">
+            <div class="contact-container-item">
+                <i class="fa fa-paper-plane"></i><br />Fill out a request form here!
+            </div>
+        </a>
+        <a href="tel:+13853093164">
+            <div class="contact-container-item">
+                <i class="fa fa-phone"></i><br />(385) 309-3164
+            </div>
+        </a>
+        <a href="mailto:andrewksandstrom@gmail.com">
+            <div class="contact-container-item">
+                <i class="fa fa-envelope"></i><br />Click here to send us an email.
+            </div>
+        </a>
+        <a href="https://facebook.com/homeinspectionsutah/" target="_blank">
+            <div class="contact-container-item">
+                <i class="fa fa-facebook-square"></i><br />Connect with us on Facebook!
+            </div>
+        </a>
+    </div>
+</div>
+

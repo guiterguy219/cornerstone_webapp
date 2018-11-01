@@ -2,6 +2,12 @@
 
 @{
     ViewBag.Title = "RequestForm";
+
+    List<string> typeOptions = new List<string>();
+
+    typeOptions.Add("Realtor");
+    typeOptions.Add("Buyer");
+    typeOptions.Add("Home Owner");
 }
 
 @using (Html.BeginForm()) 
@@ -15,7 +21,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.CustType, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownListFor(model => model.CustType, new SelectList(ViewBag.TypeOptions, "Realtor"), "Select type")
+            @Html.DropDownListFor(model => model.CustType, new SelectList(typeOptions, "Select Type"), "Select type")
             @Html.ValidationMessageFor(model => model.CustType, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -54,7 +60,7 @@
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Submit Request" class="btn btn-default" />
+            <input type="submit" value="Submit Request" class="btn btn-primary" />
         </div>
     </div>
 </div>

@@ -36,6 +36,7 @@ nav {
 .main-header {
     padding: 25px;
     border-radius: 5px;
+    border-bottom: /*rgb(22,152,250)*/ rgb(80,80,80) solid 8px;
 }
 
 .main-logo img {
@@ -61,19 +62,29 @@ nav {
     padding-right: 10px !important;
 }
 
+.main-content p {
+    margin-top: 10px;
+}
+
 .picture-caption-large {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 15px;
-    border: rgb(22,152,250) solid 4px;
+    border-bottom: /*rgb(22,152,250)*/ rgb(80,80,80) solid 8px;
+    border-radius: 5px;
     height: 100%;
 }
 
 .picture-caption-large h3 {
-    border-bottom: white solid 1px;
+    border-bottom: rgb(22,152,250) solid 3px;
     padding-bottom: 10px;
+    color: rgb(60,60,60);
+}
+
+.picture-caption-large p {
+    color: rgb(100,100,100);
 }
 
 .picture-caption-small {
@@ -95,6 +106,16 @@ nav {
 
 .home-container, .carousel-container, .picture-caption-small, .pricing-container, .faqs-container, .contact-container, .footer-container {
     padding-top: 40px !important;
+}
+
+.info-container {
+    background-color: white;
+    padding-top: 10px;
+    margin-top: 30px;
+}
+
+#buyer h2, #agent h2 {
+    text-align: center;
 }
 
 @media only screen and (max-width: 991px) {
@@ -134,15 +155,8 @@ nav {
         width: 288px;
     }
 
-
-    .price-card {
-        display: flex;
-        flex-direction: column;
-    }
-
     .big-price {
         font-size: 70pt !important;
-        align-self: center !important;
     }
 
     .menu-toggle {
@@ -181,6 +195,7 @@ nav {
 
 .pricing-header {
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .faqs-container {
@@ -264,18 +279,18 @@ nav {
     margin-bottom: 0;
 }
 
+.price-card {
+    display: flex;
+    flex-direction: column;
+}
+
 .big-price {
-    font-size: 90pt;
+    font-size: 110pt;
     font-weight: 900;
     color: #25356D;
+    align-self: center !important;
 }
 
 .italics {
     font-style: italic;
 }
-
-.text-background {
-    background-color: rgba(0,0,0,.6);
-    background-clip: content-box;
-}
-

@@ -9,17 +9,11 @@ namespace cornerstone_webapp.Controllers
 {
     public class RequestController : Controller
     {
-        public List<string> typeOptions = new List<string>();
+        static public InspectionRequest currentRequest = new InspectionRequest();
 
         // GET: Request
         public ActionResult RequestForm()
         {
-            typeOptions.Add("Realtor");
-            typeOptions.Add("Buyer");
-            typeOptions.Add("Home Owner");
-
-            ViewBag.TypeOptions = typeOptions;
-
             return View();
         }
 
@@ -30,16 +24,12 @@ namespace cornerstone_webapp.Controllers
             {
                 request.IsSubmitted = true;
 
-                return View("Home", request);
+                TempData["currentRequest"] = request;
+
+                return RedirectToAction("Home", "Home");
             }
             else
             {
-                typeOptions.Add("Realtor");
-                typeOptions.Add("Buyer");
-                typeOptions.Add("Home Owner");
-
-                ViewBag.TypeOptions = typeOptions;
-
                 return View();
             }
         }
